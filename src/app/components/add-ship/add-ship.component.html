@@ -1,1 +1,54 @@
-<p>add-ship works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <span class="text-center"><h2>CADASTRAR EMBARCAÇÃO</h2></span>
+          <form class="row g-3 mt-3" [formGroup]="shipForm" (ngSubmit)="addShip()">
+            <div class="col-md-9">
+              <label for="nameShip" class="form-label">Nome</label>
+              <input type="text" formControlName="nameShip" class="form-control" id="nameShip">
+            </div>
+            <div class="col-md-3">
+              <label for="price" class="form-label">Preço</label>
+              <input type="text" formControlName="price" class="form-control" id="price">
+            </div>
+            <div class="col-md-9">
+              <label for="destination" class="form-label">Destino</label>
+              <select id="destination" formControlName="destination" class="form-select">
+                <option selected>Selecione a cidade destino...</option>
+                <option>Alenquer</option>
+                <option>Nhamundá</option>
+                <option>Oriximiná</option>
+                <option>Parintins</option>
+                <option>Santarém</option>
+                <option>Tefé</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="capacity" class="form-label">Capacidade</label>
+              <input type="number" formControlName="capacity" class="form-control" id="capacity">
+            </div>
+            <div class="col-md-9">
+              <label for="departureDay" class="form-label">Dia de partida</label>
+              <select id="departureDay" formControlName="departureDay" class="form-select">
+                <option selected>Selecione o dia de partida...</option>
+                <option>Segunda</option>
+                <option>Terça</option>
+                <option>Quarta</option>
+                <option>Quinta</option>
+                <option>Sexta</option>
+                <option>Sábado</option>
+                <option>Domingo</option>
+              </select>
+            </div>
+            <div class="mb-3">
+             <button routerLink="/" class="btn btn-secondary btn-lg float-start">Voltar</button>
+             <button type="submit" class="btn btn-success btn-lg float-end">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
