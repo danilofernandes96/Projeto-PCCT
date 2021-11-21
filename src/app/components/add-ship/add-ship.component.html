@@ -8,10 +8,16 @@
             <div class="col-md-9">
               <label for="nameShip" class="form-label">Nome</label>
               <input type="text" formControlName="nameShip" class="form-control" id="nameShip">
+              <div class="text-danger" *ngIf="shipForm.get('nameShip')?.hasError('required') && shipForm.get('nameShip')?.touched">
+                <span>Campo <strong>obrigatório</strong></span>
+              </div>
             </div>
             <div class="col-md-3">
               <label for="price" class="form-label">Preço</label>
               <input type="text" formControlName="price" class="form-control" id="price">
+              <div class="text-danger" *ngIf="shipForm.get('price')?.hasError('required') && shipForm.get('price')?.touched">
+                <span>Campo <strong>obrigatório</strong></span>
+              </div>
             </div>
             <div class="col-md-9">
               <label for="destination" class="form-label">Destino</label>
@@ -24,10 +30,16 @@
                 <option>Santarém</option>
                 <option>Tefé</option>
               </select>
+              <div class="text-danger" *ngIf="shipForm.get('destination')?.hasError('required') && shipForm.get('destination')?.touched">
+                <span>Campo <strong>obrigatório</strong></span>
+              </div>
             </div>
             <div class="col-md-3">
               <label for="capacity" class="form-label">Capacidade</label>
               <input type="number" formControlName="capacity" class="form-control" id="capacity">
+              <div class="text-danger" *ngIf="shipForm.get('capacity')?.hasError('required') && shipForm.get('capacity')?.touched">
+                <span>Campo <strong>obrigatório</strong></span>
+              </div>
             </div>
             <div class="col-md-9">
               <label for="departureDay" class="form-label">Dia de partida</label>
@@ -41,10 +53,20 @@
                 <option>Sábado</option>
                 <option>Domingo</option>
               </select>
+              <div class="text-danger" *ngIf="shipForm.get('departureDay')?.hasError('required') && shipForm.get('departureDay')?.touched">
+                <span>Campo <strong>obrigatório</strong></span>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <label for="imageUrl" class="form-label">Foto de perfil (URL)</label>
+              <input type="text" formControlName="imageUrl" class="form-control" id="imageUrl">
+              <div class="text-danger" *ngIf="shipForm.get('imageUrl')?.hasError('required') && shipForm.get('imageUrl')?.touched">
+                <span>Campo <strong>obrigatório</strong></span>
+              </div>
             </div>
             <div class="mb-3">
              <button routerLink="/" class="btn btn-secondary btn-lg float-start">Voltar</button>
-             <button type="submit" class="btn btn-success btn-lg float-end">Cadastrar</button>
+             <button type="submit" [disabled]="shipForm.invalid" class="btn btn-success btn-lg float-end">Cadastrar</button>
             </div>
           </form>
         </div>
