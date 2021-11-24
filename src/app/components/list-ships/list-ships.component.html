@@ -7,7 +7,7 @@
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-success float-end col-lg-2 col-md-12" routerLink="/add-ship">Cadastrar uma embarcação</button>
+    <button type="button" class="btn btn-success float-end col-lg-2 col-md-12" routerLink="/add-ship">Cadastrar embarcação</button>
   </div>
 
   <main>
@@ -25,7 +25,7 @@
                 <p class="card-text">Preço: R$ {{ ship.price }},00</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-primary">Comprar Passagem</button>
+                    <button type="button" [routerLink]="['/ticket', ship._id]" class="btn btn-primary">Comprar Passagem</button>
                   </div>
                 </div>
               </div>

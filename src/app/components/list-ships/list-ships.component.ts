@@ -17,11 +17,9 @@ export class ListShipsComponent implements OnInit {
 
   gettingShips() {
     this._shipService.getShips().subscribe(data => {
-      console.log(data);
       this.listShips = data;
     }, error => {
       console.log(error);
     })
   }
-
 }

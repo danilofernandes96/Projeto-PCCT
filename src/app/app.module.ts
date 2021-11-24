@@ -10,12 +10,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { AddShipComponent } from './components/add-ship/add-ship.component';
 import { ListShipsComponent } from './components/list-ships/list-ships.component';
+import { BuyTicketComponent } from './components/buy-ticket/buy-ticket.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddShipComponent,
-    ListShipsComponent
+    ListShipsComponent,
+    BuyTicketComponent
   ],
   imports: [
     BrowserModule,

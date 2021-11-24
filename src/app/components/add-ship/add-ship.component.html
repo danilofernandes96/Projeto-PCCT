@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-3">
               <label for="price" class="form-label">Preço</label>
-              <input type="text" formControlName="price" class="form-control" id="price">
+              <input type="number" formControlName="price" class="form-control" id="price">
               <div class="text-danger" *ngIf="shipForm.get('price')?.hasError('required') && shipForm.get('price')?.touched">
                 <span>Campo <strong>obrigatório</strong></span>
               </div>
